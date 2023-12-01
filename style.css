@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --hue: 220;
+    --accent: hsl(var(--hue) 80% 70%);
+    --bkg: hsl(var(--hue) 50% 96%);
+    --txt: hsl(var(--hue) 70% 14%);
+}
+
+body {
+    font-family: 'Shizuru', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-size: 2rem;
+    line-height: 1.5;
+    background-color: var(--bkg);
+    color: var(--txt);
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    background-color: var(--bkg);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.text-container{
+    text-align: center;
+}
+
+svg {
+    --shirt: hsl(var(--hue) 60% 50%);
+    color: var(--shirt);
+}
+
+.btn.container {
+    display: flex;
+    gap: 2rem;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100vmax;
+    background-color: hsl(var(--hue) 60% 50%);
+    cursor: pointer;
+    border: none;
+    transition: box-shadow 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:is(:hover, :focus-visible) {
+    box-shadow: 0 0 0 5px var(--bkg),
+        0 0 0 12px hsl(var(--hue) 60% 50%);
+
+}
+
+h2 {
+    padding-bottom: 2rem;
+}
+
+[data-color="90"] {
+    --hue: 90;
+}
+[data-color="10"] {
+    --hue: 10;
+}
+[data-color="260"] {
+    --hue: 260;
+}
+[data-color="320"] {
+    --hue: 320;
+}
